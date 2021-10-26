@@ -1,0 +1,62 @@
+* {
+  font-family: "Antonio", sans-serif;
+}
+.cf {
+  color: black;
+  font-size: 55px;
+  position: absolute;
+  top: 11%;
+  transform: translateX(-50%);
+  left: 50%;
+  font-weight: bold;
+}
+.signin {
+  position: absolute;
+  top: 42%;
+  width: 46%;
+  height: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: 3px solid #fae9c9;
+}
+.register {
+  position: absolute;
+  top: 53%;
+  width: 60%;
+  height: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: 3px solid #fae9c9;
+}
+.mlu {
+  color: blue;
+  font-size: 36px;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  font-weight: bold;
+}
+form {
+  position: absolute;
+  top: 32%;
+  display: grid;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 65px;
+  text-align: center;
+}
+input {
+  height: 76px;
+  border-color: black;
+  background-color: #e6e6e6;
+  border-radius: 30px;
+  text-align: center;
+}

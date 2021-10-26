@@ -1,0 +1,24 @@
+.footer {
+  position: absolute;
+  bottom: 7%;
+  left: 15%;
+}
+ul {
+  list-style: none;
+  left: 50%;
+}
+li {
+  display: inline;
+  padding: 24px;
+}
+.fblogo {
+  width: 18%;
+}
+.instalogo {
+  width: 18%;
+}
+.weblogo {
+  width: 18%;
+  transform: scale(2.5);
+  margin-left: 29px;
+}
