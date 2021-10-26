@@ -8,17 +8,20 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 
 <form>
-
+    <p class="rules">Tout les champs sont obligatoires</p>
     <label>Nom</label>
-    <input type="text">
+    <input type="text" style="font-size: 51px;" required>
     <label>Prénom</label>
-    <input type="text">
+    <input type="text" style="font-size: 51px;" required>
     <label>Email</label>
-    <input type="email">
+    <input type="email" style="font-size: 51px;" value="" autocomplete="off" requiered>
     <label>Mot de passe</label>
-    <input type="password">
+    <input type="password" style="font-size: 51px;" value="" autocomplete="off" required>
     <label>Code postal</label>
-    <input type="number">
+    <input type="number" style="font-size: 51px;" required>
+
+    <!-- NEED CAPTCHA -->
+    <input type="submit" class="submitsend" value="S'inscrire">
 
 
 
