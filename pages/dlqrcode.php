@@ -3,7 +3,7 @@
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
-<link href="../styles/dlqrcode.css" rel="stylesheet">
+<link href="styles/dlqrcode.css" rel="stylesheet">
 <h1>Télécharger votre QrCode</h1>
 
 

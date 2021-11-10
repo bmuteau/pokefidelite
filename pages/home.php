@@ -3,14 +3,14 @@
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
-<link href="../styles/home.css" rel="stylesheet">
+<link href="styles/home.css" rel="stylesheet">
 
 <div class="menu-bg"></div>
 <div class="menu-burger">☰</div>
 <div class="menu-items">
-    <div> <a href="../pages/home.php">• Accueil </a> </div>
-    <div><a href="../pages/editInfo.php">• Mes informations</a></div>
-    <div><a href="../pages/fonction.php">• Fonctionnement de la carte de fidélité </a></div>
+    <div> <a href="home">• Accueil </a> </div>
+    <div><a href="editInfo">• Mes informations</a></div>
+    <div><a href="fonction">• Fonctionnement de la carte de fidélité </a></div>
     <br />
     <br />
     <br />
@@ -45,7 +45,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
             &nbsp; caisse&nbsp;</span></p>
 </div>
 
-<script src="../script/navbar.js"></script>
+<script src="script/navbar.js"></script>
 
 <?php
 // footer

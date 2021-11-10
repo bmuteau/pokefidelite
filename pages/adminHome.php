@@ -2,7 +2,7 @@
 // header
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 ?>
-<link href="../styles/adminHome.css" rel="stylesheet">
+<link href="styles/adminHome.css" rel="stylesheet">
 
 <section>
     <h2> &nbsp; Nombre de clients fidélisé &nbsp;</h2><br />

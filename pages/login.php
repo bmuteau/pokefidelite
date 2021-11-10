@@ -3,7 +3,7 @@
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
-<link href="../styles/connexionregister.css" rel="stylesheet">
+<link href="styles/connexionregister.css" rel="stylesheet">
 <p class="cf">Mon compte de <br /> fidélité</p>
 
 

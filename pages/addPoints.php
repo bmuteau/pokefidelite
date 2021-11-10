@@ -2,9 +2,9 @@
 // header
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 ?>
-<link href="../styles/addPoints.css" rel="stylesheet">
+<link href="styles/addPoints.css" rel="stylesheet">
 
-<img src="../src/iconfinder_qrcode_7124082.svg" class="qrcode">
+<img src="src/iconfinder_qrcode_7124082.svg" class="qrcode">
 
 <h2>Nombre de points à <br />
     ajouter:

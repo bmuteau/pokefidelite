@@ -4,15 +4,15 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
-<link href="../styles/home.css" rel="stylesheet">
-<link href="../styles/connexionregister.css" rel="stylesheet">
+<link href="styles/home.css" rel="stylesheet">
+<link href="styles/connexionregister.css" rel="stylesheet">
 
 <div class="menu-bg"></div>
 <div class="menu-burger">☰</div>
 <div class="menu-items">
-    <div> <a href="../pages/home.php">• Accueil </a> </div>
-    <div><a href="../pages/editInfo.php">• Mes informations</a></div>
-    <div><a href="../pages/fonction.php">• Fonctionnement de la carte de fidélité </a></div>
+    <div> <a href="home">• Accueil </a> </div>
+    <div><a href="editInfo">• Mes informations</a></div>
+    <div><a href="fonction">• Fonctionnement de la carte de fidélité </a></div>
     <br />
     <br />
     <br />
@@ -23,15 +23,15 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <div><a href="https://www.pokegranville.fr/politique-de-confidentialite/">• Politique de confidentialité</a></div>
 </div>
 <form class="form" style="left:20%;">
-    <label for="popup__1"><img src="../src/editpen.svg" class="pen"> Nom </label>
+    <label for="popup__1"><img src="src/editpen.svg" class="pen"> Nom </label>
     <input type="text" style="font-size: 51px;" value="NOM" disabled="disabled" required>
-    <label for="popup__2"> <img src="../src/editpen.svg" class="pen"> Prénom </label>
+    <label for="popup__2"> <img src="src/editpen.svg" class="pen"> Prénom </label>
     <input type="text" style="font-size: 51px;" value="PRENOM" disabled="disabled" required>
-    <label for="popup__3"><img src="../src/editpen.svg" class="pen"> Email </label>
+    <label for="popup__3"><img src="src/editpen.svg" class="pen"> Email </label>
     <input type="email" style="font-size: 51px;" value="EMAIL" autocomplete="off" disabled="disabled" requiered>
-    <label for="popup__4"><img src="../src/editpen.svg" class="pen"> Mot de passe </label>
+    <label for="popup__4"><img src="src/editpen.svg" class="pen"> Mot de passe </label>
     <input type="password" style="font-size: 51px;" value="MOT DE PASSE" autocomplete="off" disabled="disabled" required>
-    <label for="popup__5"><img src="../src/editpen.svg" class="pen"> Code postal </label>
+    <label for="popup__5"><img src="src/editpen.svg" class="pen"> Code postal </label>
     <input type="number" style="font-size: 51px;" value="12345" disabled="disabled" required>
 </form>
 <div class="intro">
@@ -201,7 +201,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 </div>
 <!-- End popup -->
 
-<script src="../script/navbar.js"></script>
+<script src="script/navbar.js"></script>
 
 
 <?php

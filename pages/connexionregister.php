@@ -3,13 +3,13 @@
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
-<link href="../styles/connexionregister.css" rel="stylesheet">
+<link href="styles/connexionregister.css" rel="stylesheet">
 <p class="cf">Compte de fidélité</p>
 
 <body>
 
-    <button class="signin"><a href="../pages/register.php">S'inscrire</a></button>
-    <button class="register"><a href="../pages/login.php">Se connecter</a></button>
+    <button class="signin"><a href="register">S'inscrire</a></button>
+    <button class="register"><a href="login">Se connecter</a></button>
 
 </body>
 

@@ -2,10 +2,10 @@
 // header
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 ?>
-<link href="../styles/fonction.css" rel="stylesheet">
+<link href="styles/fonction.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
 
-<a href="../pages/home.php"><img src="../src/iconfinder_home_216242.svg" class="home"></a>
+<a href="home"><img src="src/iconfinder_home_216242.svg" class="home"></a>
 <section carrousel>
 
     <input id="slide-0" name="carrousel" type="radio" checked />
