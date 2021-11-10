@@ -8,8 +8,8 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <body>
 
-    <button class="signin">S'inscrire</button>
-    <button class="register">Se connecter</button>
+    <button class="signin"><a href="../pages/register.php">S'inscrire</a></button>
+    <button class="register"><a href="../pages/login.php">Se connecter</a></button>
 
 </body>
 

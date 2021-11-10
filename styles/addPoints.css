@@ -1,0 +1,41 @@
+.qrcode {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+h2 {
+  position: absolute;
+  top: 38%;
+  left: 23%;
+  text-align: center;
+  font-size: 60px;
+}
+input {
+  position: absolute;
+  top: 51%;
+  left: 25%;
+  width: 50%;
+  height: 4%;
+  background-color: lightgrey;
+  padding-left: 24%;
+  font-size: 50px;
+}
+.button1 {
+  background-color: yellow;
+  width: 594px;
+  height: 172px;
+  margin-bottom: 85px;
+  font-size: 50px;
+  border-radius: 41px;
+  position: absolute;
+  bottom: 20%;
+  left: 224px;
+}
+.user {
+  position: absolute;
+  top: 34%;
+  left: 19%;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 900;
+}

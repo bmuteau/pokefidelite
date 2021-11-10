@@ -4,3 +4,11 @@
   left: 50%;
   position: absolute;
 }
+
+html {
+  background-color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}

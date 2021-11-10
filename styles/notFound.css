@@ -1,0 +1,19 @@
+h1 {
+  position: absolute;
+  top: 27%;
+  width: 70%;
+  font-size: 60px;
+  left: 15%;
+  text-align: center;
+}
+a {
+  text-decoration: underline;
+  color: black;
+}
+.poke {
+  width: 50%;
+  position: absolute;
+  top: 57%;
+  left: 25%;
+  border-radius: 30%;
+}

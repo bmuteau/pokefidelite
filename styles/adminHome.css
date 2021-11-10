@@ -1,0 +1,35 @@
+section {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+}
+
+h2 {
+  background-color: #fae9c9;
+  font-size: 70px;
+  text-align: center;
+}
+h3 {
+  font-size: 61px;
+  text-align: center;
+  margin: 0;
+}
+article {
+  position: absolute;
+  bottom: 20%;
+  left: 224px;
+}
+
+button {
+  width: 530px;
+  height: 172px;
+  margin-bottom: 85px;
+  font-size: 50px;
+  border-radius: 41px;
+}
+.button1 {
+  background-color: yellow;
+}
+.button2 {
+  background-color: #128cff;
+}

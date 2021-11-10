@@ -9,6 +9,7 @@
   transform: translateX(-50%);
   left: 50%;
   font-weight: bold;
+  text-align: center;
 }
 .signin {
   position: absolute;
@@ -48,25 +49,28 @@ form {
   top: 22%;
   display: grid;
   width: 50%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20%;
   font-size: 65px;
   text-align: center;
 }
 input {
   height: 76px;
-  border-color: black;
+  border: none;
   background-color: #e6e6e6;
   border-radius: 30px;
   text-align: center;
+  font-style: italic;
+  color: grey;
 }
 
 .submitsend {
-  margin-top: 59%;
+  margin-top: 49%;
   font-size: 54px;
-  background-color: #2d9bf0;
-  font-weight: bold;
+  background-color: #fae9c9;
+  font-weight: 900;
   height: 116px;
+  color: black;
+  font-style: inherit;
 }
 
 .rules {
@@ -81,9 +85,15 @@ input {
   bottom: -151%;
   width: 114%;
   height: 41%;
-  font-size: 41px;
-  background-color: #2d9bf0;
-  border: 3px solid black;
+  font-size: 46px;
+  background-color: #fae9c9;
   border-radius: 64px;
-  font-weight: bold;
+  font-weight: 900;
+  border: none;
+  left: 10%;
+  font-style: inherit;
+  color: black;
+}
+.center {
+  left: 30%;
 }

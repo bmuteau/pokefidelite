@@ -9,7 +9,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <!-- QRCODE Généré et affiché ici -> 1 QrCode par adresse mail  -->
 
-<input type="button" class="dl" value="Télécharger le QrCode">
+<button class="dl">Télécharger le QrCode ou prenez une capture d'écran !</button>
 <?php
 // footer
 include 'C:\wamp64\www\pokefidelite\template\footer.php';

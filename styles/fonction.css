@@ -1,0 +1,106 @@
+[carrousel] {
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  min-height: 50vh;
+  top: 20%;
+}
+[carrousel]::before {
+  content: "";
+  display: block;
+  padding-bottom: 50%;
+}
+[carrousel] [name~="carrousel"] {
+  display: none;
+}
+[carrousel] [name~="carrousel"]:checked + .slide {
+  pointer-events: auto;
+  opacity: 1;
+}
+[carrousel] [name~="carrousel"]:checked + .slide .slide-content {
+  opacity: 1;
+}
+[carrousel] .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+[carrousel] .slide-content {
+  opacity: 0;
+  transition: opacity 1s;
+}
+[carrousel] .back,
+[carrousel] .forward {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2rem);
+  height: 4rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 0.5rem;
+  background-color: #d5f4df;
+  border-radius: 100px;
+  color: #0f3b1d;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+[carrousel] .back:hover,
+[carrousel] .forward:hover {
+  transform: scale(1);
+  background-color: white;
+}
+[carrousel] .back {
+  left: calc(0% + 63px);
+  width: 7%;
+  height: 10%;
+  font-size: 60px;
+  background-color: #fae9c9;
+}
+[carrousel] .forward {
+  right: calc(0% + 63px);
+  width: 7%;
+  height: 10%;
+  font-size: 60px;
+  background-color: #fae9c9;
+}
+
+[carrousel] h1 {
+  font-size: 70px;
+  color: black;
+  width: 71%;
+  text-align: center;
+  left: 14%;
+  position: absolute;
+  top: 13%;
+}
+[carrousel] p {
+  position: absolute;
+  font-size: 50px;
+  left: 18%;
+  width: 70%;
+  top: 33%;
+}
+body {
+  margin: 0;
+}
+.home {
+  position: absolute;
+  top: 14%;
+  width: 13%;
+  right: 10%;
+}
