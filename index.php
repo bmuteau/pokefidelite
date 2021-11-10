@@ -1,4 +1,55 @@
 <?php
+session_start();
+
+
+use Application\Database;
+use Application\HelperFunctions;
+
+$db_class_name = "Application\Database";
+
+$autoloader_db = function ($db_class_name) {
+    // on prépare le terrain : on remplace le séparteur d'espace de nom par le séparateur de répertoires du système
+    $name = str_replace('\\', DIRECTORY_SEPARATOR, $db_class_name);
+    // on construit le chemin complet du fichier à inclure :
+    // il faut que l'autoloader soit toujours à la racine du site : tout part de là avec __DIR__
+    $path = __DIR__ . DIRECTORY_SEPARATOR . $name . '.php';
+
+    // on vérfie que le fichier existe et on l'inclut
+    // sinon on passe la main à une autre autoloader (return false)
+    if (is_file($path)) {
+        include $path;
+    } else {
+        return false;
+    }
+};
+spl_autoload_register($autoloader_db);
+
+$hlp_class_name = "Application\HelperFunctions";
+
+$autoloader_hlp = function ($hlp_class_name) {
+    // on prépare le terrain : on remplace le séparteur d'espace de nom par le séparateur de répertoires du système
+    $name = str_replace('\\', DIRECTORY_SEPARATOR, $hlp_class_name);
+    // on construit le chemin complet du fichier à inclure :
+    // il faut que l'autoloader soit toujours à la racine du site : tout part de là avec __DIR__
+    $path = __DIR__ . DIRECTORY_SEPARATOR . $name . '.php';
+
+    // on vérfie que le fichier existe et on l'inclut
+    // sinon on passe la main à une autre autoloader (return false)
+    if (is_file($path)) {
+        include $path;
+    } else {
+        return false;
+    }
+};
+spl_autoload_register($autoloader_hlp);
+
+
+$db = new Application\Database();
+$db = new Database();
+$hlp = new Application\HelperFunctions();
+$hlp = new HelperFunctions();
+
+
 
 $urlword = array();
 if (isset($_GET['url'])) {
@@ -6,6 +57,21 @@ if (isset($_GET['url'])) {
 } else {
     array_push($urlword, "");
 }
+
+$connectionNeeded = array(
+
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+);
 
 $urlsPossible = array(
     "pageNotFound" => 0,
@@ -44,8 +110,13 @@ $filesPossible = array(
     "pages/register.php",
 );
 
+
+
 if (count($urlword) > 0 && array_key_exists($urlword[0], $urlsPossible)) {
     $idUrl = $urlsPossible[$urlword[0]];
+    if ($connectionNeeded[$idUrl] == true && $hlp->isConnected() == false) {
+        $idUrl = 6;
+    }
     $_SESSION['pageid'] = $idUrl;
     require $filesPossible[$idUrl];
 } else {

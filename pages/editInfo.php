@@ -21,6 +21,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <div> <a href="https://www.pokegranville.fr/contact/">• Nous contacter</a></div>
     <div><a href="https://www.pokegranville.fr/mentions-legales/">• Mention légale </a></div>
     <div><a href="https://www.pokegranville.fr/politique-de-confidentialite/">• Politique de confidentialité</a></div>
+    <br />
+    <br />
+    <div><a href="connexionregister">• Se déconnecter</a></div>
 </div>
 <form class="form" style="left:20%;">
     <label for="popup__1"><img src="src/editpen.svg" class="pen"> Nom </label>

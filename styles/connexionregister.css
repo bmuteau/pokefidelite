@@ -97,3 +97,37 @@ input {
 .center {
   left: 30%;
 }
+.error {
+  position: absolute;
+  bottom: 15%;
+  left: 12%;
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-weight: 900;
+  font-size: smaller;
+}
+.error2 {
+  position: absolute;
+  bottom: -74%;
+  left: 12%;
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-weight: 900;
+  font-size: smaller;
+}
+.already {
+  font-size: 50px;
+  margin-top: 3%;
+  text-decoration: underline;
+}
+.already2 {
+  font-size: 50px;
+  margin-top: 3%;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 17%;
+  text-align: center;
+  left: 26%;
+}
