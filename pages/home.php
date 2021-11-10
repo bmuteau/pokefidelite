@@ -1,5 +1,6 @@
 <?php
 global $hlp, $db;
+$_SESSION['points'] = $hlp->majpoint($_SESSION['email']);
 if ($hlp->isConnected() == false) {
     header("location:connexionregister");
 }
@@ -29,13 +30,12 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <div class="content">
     <h2>Prochaine réduction dans : </h2>
-    <p><span> &nbsp;VARIABLE points &nbsp; </span></p>
+    <p><span> &nbsp; <?= 100 - $_SESSION['points'] ?> &nbsp; </span></p>
     <h2>=</h2>
     <p class="reduct">10% de réduction</p>
     <h2>Mes points actuels :</h2>
-    <p><span style="font-size:100px;"> &nbsp;VARIABLE2 &nbsp; </span></p>
+    <p><span style="font-size:100px;"> &nbsp;<?= $_SESSION['points'] ?> &nbsp; </span></p>
 
-    <!-- QRCODE -->
     <br />
     <br />
     <br />

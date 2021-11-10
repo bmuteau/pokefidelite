@@ -50,7 +50,7 @@ class HelperFunctions
     }
     public static function isConnected(): bool
     {
-        if (isset($_SESSION['admin']) && isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['lname']) && isset($_SESSION['postalcode']) && isset($_SESSION['password'])) {
+        if (isset($_SESSION['admin']) && isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['fname']) && isset($_SESSION['lname']) && isset($_SESSION['postalcode']) && isset($_SESSION['password']) && isset($_SESSION['points'])) {
             return true;
         }
         return false;
@@ -78,6 +78,9 @@ class HelperFunctions
         if (isset($_SESSION['admin'])) {
             unset($_SESSION['admin']);
         }
+        if (isset($_SESSION['points'])) {
+            unset($_SESSION['points']);
+        }
     }
     public static function connexion(string $email, string $password)
     {
@@ -96,6 +99,7 @@ class HelperFunctions
                     $_SESSION['postalcode'] = $stmresult['postalcode'];
                     $_SESSION['password'] = $password;
                     $_SESSION['admin'] = $stmresult['admin'];
+                    $_SESSION['points'] = $stmresult['points'];
                     return 0; // tout est ok
                 } else {
                     return 1; // password incorect
@@ -104,5 +108,19 @@ class HelperFunctions
             return 2; // email erronné
         }
         return 3; // erreur avec de connexion avec la DB 
+    }
+    public static function majpoint(string $email)
+    {
+        global $db;
+        $connect = $db->connect();
+        if ($connect != null) {
+            $stm = $connect->prepare("SELECT * FROM users WHERE email=? ");
+            $stm->execute(array($email));
+            $stmresult = $stm->fetch();
+            if ($stmresult) {
+                return $stmresult['points'];
+            }
+        }
+        return $_SESSION['points'];
     }
 }

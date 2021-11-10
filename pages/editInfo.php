@@ -1,5 +1,6 @@
 <?php
-// header
+global $hlp, $db;
+
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
@@ -26,16 +27,16 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <div><a href="connexionregister">• Se déconnecter</a></div>
 </div>
 <form class="form" style="left:20%;">
-    <label for="popup__1"><img src="src/editpen.svg" class="pen"> Nom </label>
-    <input type="text" style="font-size: 51px;" value="NOM" disabled="disabled" required>
+    <label for="popup__1"><img src="src/editpen.svg" class="pen"> Nom</label>
+    <input type="text" style="font-size: 51px;" value="<?= $_SESSION['lname'] ?> " disabled="disabled" required>
     <label for="popup__2"> <img src="src/editpen.svg" class="pen"> Prénom </label>
-    <input type="text" style="font-size: 51px;" value="PRENOM" disabled="disabled" required>
+    <input type="text" style="font-size: 51px;" value="<?= $_SESSION['fname'] ?> " disabled="disabled" required>
     <label for="popup__3"><img src="src/editpen.svg" class="pen"> Email </label>
-    <input type="email" style="font-size: 51px;" value="EMAIL" autocomplete="off" disabled="disabled" requiered>
+    <input type="email" style="font-size: 51px;" value="<?= $_SESSION['email'] ?> " autocomplete="off" disabled="disabled" requiered>
     <label for="popup__4"><img src="src/editpen.svg" class="pen"> Mot de passe </label>
-    <input type="password" style="font-size: 51px;" value="MOT DE PASSE" autocomplete="off" disabled="disabled" required>
+    <input type="password" style="font-size: 51px;" value="<?= $_SESSION['password'] ?> " autocomplete="off" disabled="disabled" required>
     <label for="popup__5"><img src="src/editpen.svg" class="pen"> Code postal </label>
-    <input type="number" style="font-size: 51px;" value="12345" disabled="disabled" required>
+    <input type="text" style="font-size: 51px;" value="<?= $_SESSION['postalcode']  . "" ?> " disabled="disabled" required>
 </form>
 <div class="intro">
     <h3>Mes informations</h3>
