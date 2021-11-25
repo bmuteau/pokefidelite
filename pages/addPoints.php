@@ -1,6 +1,19 @@
 <?php
 // header
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
+
+global $db, $hlp;
+if (!isset($_SESSION['userTargetId'])) {
+    header('location:scanner');
+}
+
+if (isset($_POST['addPoint'])) {
+    $hlp->addPoint($_SESSION['userTargetId'], $_POST['points']);
+    unset($_SESSION['userTargetId']);
+    header('location:scanner');
+}
+
+
 ?>
 <link href="styles/addPoints.css" rel="stylesheet">
 
@@ -9,12 +22,12 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 <h2>Nombre de points à <br />
     ajouter:
 </h2>
+<form method="POST">
+    <input type="number" value="1" name="points" required>
 
-<input type="number" value="1">
-
-<button class="button1">Scanner une carte <br />
-    de fidélité
-</button>
+    <button class="button1" name="addPoint">OK
+    </button>
+</form>
 <?php
 // footer
 include 'C:\wamp64\www\pokefidelite\template\footer.php';

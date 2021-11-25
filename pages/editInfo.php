@@ -1,6 +1,22 @@
 <?php
 global $hlp, $db;
 
+if (isset($_POST['changeLName'])) {
+    $hlp->updateAccount('lname', $_POST['valueLName'], $_SESSION['id'], "lname");
+}
+if (isset($_POST['changeFName'])) {
+    $hlp->updateAccount('fname', $_POST['valueFName'], $_SESSION['id'], "fname");
+}
+if (isset($_POST['changeEmail'])) {
+    $hlp->updateAccount('email', $_POST['valueEmail'], $_SESSION['id'], "email");
+}
+
+if (isset($_POST['changePass'])) {
+    $hlp->updateAccount('password', $_POST['valuePass'], $_SESSION['id'], "password");
+}
+if (isset($_POST['changePC'])) {
+    $hlp->updateAccount('postalcode', $_POST['valuePC'], $_SESSION['id'], "postalcode");
+}
 include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 ?>
@@ -65,9 +81,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
                     <label id="type" style="left: 11%;
     position: relative;">Nom</label>
 
-                    <input type="text" class="editing" style="font-size: 51px;">
+                    <input type="text" class="editing" style="font-size: 51px;" name="valueLName">
 
-                    <button type="submit" class="validate">OK </button>
+                    <button type="submit" class="validate" name="changeLName">OK </button>
                 </div>
             </form>
             <p>
@@ -97,9 +113,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
                 <label id="type" style="left: 11%;
     position: relative;">Prénom</label>
 
-                <input type="text" class="editing" style="font-size: 51px;">
+                <input type="text" class="editing" name="valueFName" style="font-size: 51px;">
 
-                <button type="submit" class="validate">OK </button>
+                <button type="submit" class="validate" name="changeFName">OK </button>
             </form>
             <p>
         </div>
@@ -128,9 +144,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
                 <label id="type" style="left: 11%;
     position: relative;">Email</label>
 
-                <input type="text" class="editing" style="font-size: 51px;">
+                <input type="text" class="editing" style="font-size: 51px;" name="valueEmail">
 
-                <button type="submit" class="validate">OK </button>
+                <button type="submit" class="validate" name="changeEmail">OK </button>
             </form>
             <p>
         </div>
@@ -161,9 +177,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
                 <label id="type" style="left: 11%;
     position: relative;">Mot de Passe</label>
 
-                <input type="text" class="editing" style="font-size: 51px;">
+                <input type="text" class="editing" style="font-size: 51px;" name="valuePass">
 
-                <button type="submit" style="top:150%;" class="validate">OK </button>
+                <button type="submit" style="top:150%;" class="validate" name="changePass">OK </button>
             </form>
             <p>
         </div>
@@ -195,9 +211,9 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
                 <label id="type" style="left: 11%;
     position: relative;">Code postal</label>
 
-                <input type="text" class="editing" style="font-size: 51px;">
+                <input type="text" class="editing" style="font-size: 51px;" name="valuePC">
 
-                <button type="submit" style="top:150%;" class="validate">OK </button>
+                <button type="submit" style="top:150%;" class="validate" name="changePC">OK </button>
             </form>
             <p>
         </div>

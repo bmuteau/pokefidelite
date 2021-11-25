@@ -7,14 +7,15 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 <img src="src/iconfinder_qrcode_7124082.svg" class="qrcode">
 
 <div class="user">
-    <!--  VARIABLE A CHANGER SELON LE QRCODE SCANNé-->
+    <!--  VARIABLE A CHANGER SELON LE QRCODE test SCANNé-->
     <p>Nom</p>
     <p>Prénom</p>
     <p>Nombre de points</p>
 
 </div>
 
-<button class="button1"><a href="addPoints">Scanner une autre carte <br />
+<button class="button1"><a href="scanner
+">Scanner une autre carte <br />
         de fidélité</a>
 </button>
 <?php

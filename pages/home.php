@@ -25,12 +25,16 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <div><a href="https://www.pokegranville.fr/politique-de-confidentialite/">• Politique de confidentialité</a></div>
     <br />
     <br />
+    <?php if ($hlp->isAdmin()) { ?>
+        <div><a href="adminHome"> ESPACE ADMIN</div>
+
+    <?php  } ?>
     <div><a href="connexionregister">• Se déconnecter</a></div>
 </div>
 
 <div class="content">
     <h2>Prochaine réduction dans : </h2>
-    <p><span> &nbsp; <?= 100 - $_SESSION['points'] ?> &nbsp; </span></p>
+    <p><span> &nbsp; <?= 100 - $_SESSION['points'] ?> points &nbsp; </span></p>
     <h2>=</h2>
     <p class="reduct">10% de réduction</p>
     <h2>Mes points actuels :</h2>
@@ -45,7 +49,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <br />
     <br />
     <br />
-    <p><span>&nbsp;N'oubliez pas&nbsp;<br />
+    <p class="up"><span>&nbsp;N'oubliez pas&nbsp;<br />
             &nbsp; de présenter votre QrCode &nbsp;<br />
             &nbsp;à chaque passage en&nbsp; </br>
             &nbsp; caisse&nbsp;</span></p>

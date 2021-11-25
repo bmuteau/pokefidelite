@@ -71,8 +71,25 @@ $connectionNeeded = array(
     false,
     true,
     false,
+    false,
 );
 
+$adminNeeded = array(
+
+    false,
+    false,
+    false,
+    false,
+    true,
+    true,
+    false,
+    false,
+    false,
+    true,
+    false,
+    true,
+
+);
 $urlsPossible = array(
     "pageNotFound" => 0,
     "pagenotfound" => 0,
@@ -91,6 +108,7 @@ $urlsPossible = array(
     "qrcodeProfile" => 9,
     "qrcodeprofile" => 9,
     "register" => 10,
+    "scanner" => 11,
 
 
 
@@ -108,6 +126,7 @@ $filesPossible = array(
     "pages/login.php",
     "pages/qrcodeProfile.php",
     "pages/register.php",
+    "pages/scanner.php",
 );
 
 
@@ -116,6 +135,9 @@ if (count($urlword) > 0 && array_key_exists($urlword[0], $urlsPossible)) {
     $idUrl = $urlsPossible[$urlword[0]];
     if ($connectionNeeded[$idUrl] == true && $hlp->isConnected() == false) {
         $idUrl = 6;
+    }
+    if ($adminNeeded[$idUrl] == true && $hlp->isAdmin() == false) {
+        $idUrl = 0;
     }
     $_SESSION['pageid'] = $idUrl;
     require $filesPossible[$idUrl];

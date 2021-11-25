@@ -123,4 +123,89 @@ class HelperFunctions
         }
         return $_SESSION['points'];
     }
+    public static function idInfo(string $id): array
+    {
+        global $db;
+        $connect = $db->connect();
+        $res = array();
+
+        if ($connect == null) {
+            return $res;
+        }
+        $intId = intval($id);
+        $stm = $connect->prepare("SELECT * FROM users WHERE id=?");
+        $stm->execute(array($intId));
+        $resStm = $stm->fetch();
+        if ($resStm) {
+            $res = $resStm;
+        }
+        $db->disconnect();
+        return $res;
+    }
+    public static function addPoint(int $id, int $points)
+    {
+        $infoStock = self::idInfo($id);
+
+        if (count($infoStock) <= 0) {
+            return;
+        }
+        global $db;
+        $connect = $db->connect();
+
+        if ($connect == null) {
+            return;
+        }
+        $points = $points + $infoStock['points'];
+        $stm = $connect->prepare("UPDATE users SET points=? WHERE id=?");
+        $stm->execute(array($points, $id));
+
+
+        $db->disconnect();
+    }
+    public static function isAdmin()
+    {
+        if (self::isConnected() == false) {
+            return false;
+        }
+        if ($_SESSION['admin'] == 1) {
+            return true;
+        }
+        return false;
+    }
+    public static function getUsers()
+    {
+        global $db;
+        $res = array();
+        $connect = $db->connect();
+        if ($connect == null) {
+            return $res;
+        }
+        $stm = $connect->prepare("SELECT * FROM users WHERE admin=0 ");
+        $stm->execute();
+        while ($resStm = $stm->fetch()) {
+            array_push($res, $resStm);
+        }
+
+
+        $db->disconnect();
+        return $res;
+    }
+
+
+    public static function updateAccount(string $variableInSql, string $value, int $id, string $variableNameSession)
+    {
+        $tmpValue = $value;
+        if ($variableInSql == "password") {
+            $value = password_hash($value, PASSWORD_DEFAULT);
+        }
+        global $db;
+        $connect = $db->connect();
+        if ($connect == null) {
+            return;
+        }
+        $stm = $connect->prepare("UPDATE users SET $variableInSql=? WHERE id=?");
+        $stm->execute(array($value, $id));
+        $db->disconnect();
+        $_SESSION[$variableNameSession] = $tmpValue;
+    }
 }
