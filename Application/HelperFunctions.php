@@ -42,6 +42,7 @@ class HelperFunctions
             ));
             $db->disconnect();
             if (self::isAccountExist($email)) {
+                self::connexion($email, $password);
                 return 0; // aucun probleme
             }
             return 3; // erreur a la creation

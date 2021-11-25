@@ -49,10 +49,10 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <br />
     <br />
     <br />
-    <p class="up"><span>&nbsp;N'oubliez pas&nbsp;<br />
-            &nbsp; de présenter votre QrCode &nbsp;<br />
-            &nbsp;à chaque passage en&nbsp; </br>
-            &nbsp; caisse&nbsp;</span></p>
+    <p class="up"><a href="qrcode"><span>&nbsp;N'oubliez pas&nbsp;<br />
+                &nbsp; de présenter votre QrCode &nbsp;<br />
+                &nbsp;à chaque passage en&nbsp; </br>
+                &nbsp; caisse&nbsp;</span></a></p>
 </div>
 
 <script src="script/navbar.js"></script>

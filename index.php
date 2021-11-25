@@ -5,6 +5,8 @@ session_start();
 use Application\Database;
 use Application\HelperFunctions;
 
+
+
 $db_class_name = "Application\Database";
 
 $autoloader_db = function ($db_class_name) {
@@ -72,6 +74,7 @@ $connectionNeeded = array(
     true,
     false,
     false,
+    true,
 );
 
 $adminNeeded = array(
@@ -88,6 +91,7 @@ $adminNeeded = array(
     true,
     false,
     true,
+    false,
 
 );
 $urlsPossible = array(
@@ -109,6 +113,7 @@ $urlsPossible = array(
     "qrcodeprofile" => 9,
     "register" => 10,
     "scanner" => 11,
+    "qrcode" => 12,
 
 
 
@@ -127,6 +132,7 @@ $filesPossible = array(
     "pages/qrcodeProfile.php",
     "pages/register.php",
     "pages/scanner.php",
+    "pages/qrcode.php",
 );
 
 

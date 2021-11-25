@@ -69,14 +69,14 @@
   width: 7%;
   height: 10%;
   font-size: 60px;
-  background-color: #fae9c9;
+  background-color: transparent;
 }
 [carrousel] .forward {
   right: calc(0% + 63px);
   width: 7%;
   height: 10%;
   font-size: 60px;
-  background-color: #fae9c9;
+  background-color: transparent;
 }
 
 [carrousel] h1 {
