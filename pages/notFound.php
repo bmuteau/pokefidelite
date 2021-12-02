@@ -1,8 +1,9 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+include 'template/header.php';
 ?>
-<link href="styles/NotFound.css" rel="stylesheet">
+<link href="styles/notFound.css" rel="stylesheet">
+<title>Cette page n'existe pas </title>
 
 <h1>Page non trouvé, vous pouvez aller sur le site en <a href="https://www.pokegranville.fr/">cliquant ici</a> <br /> <br />ou retourner a l'accueil de votre compte de fidélité en <a href="home">cliquant ici ! </a>
 </h1>
@@ -10,5 +11,5 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 <img src="src/poke.jpg" class="poke">
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>

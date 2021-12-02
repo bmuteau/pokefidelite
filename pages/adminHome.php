@@ -1,6 +1,6 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+include 'template/header.php';
 global $hlp, $db;
 $users = $hlp->getUsers();
 $nbUsers = count($users);
@@ -36,6 +36,7 @@ foreach ($users as $user) {
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Code Postal</th>
+                <th>Nombre de points</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,7 @@ foreach ($users as $user) {
                     <td><?= $user['fname'] ?></td>
                     <td><?= $user['lname'] ?></td>
                     <td><?= $user['postalcode'] ?></td>
+                    <td><?= $user['points'] ?></td>
                 </tr>
             <?php } ?>
 
@@ -55,5 +57,5 @@ foreach ($users as $user) {
 <script type="text/javascript" src="script/bddexport.js"></script>
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>

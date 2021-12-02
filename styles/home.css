@@ -105,7 +105,7 @@ span {
 }
 .form {
   position: absolute;
-  top: 29%;
+  top: 27%;
   left: 45%;
 }
 label {
@@ -268,9 +268,9 @@ input[type="password"]:disabled {
 .editing {
   position: absolute;
   left: -10%;
-  top: 114%;
+  top: 180%;
   width: 141%;
-  height: 21%;
+  height: 35%;
 }
 
 .validate {
@@ -296,4 +296,33 @@ h3 {
 .up {
   position: absolute;
   bottom: -4%;
+}
+@media (min-width: 320px) {
+  .up {
+    font-size: 20px;
+    bottom: 10%;
+  }
+}
+@media (min-width: 1020px) {
+  .content {
+    font-size: 20px;
+    left: 30%;
+  }
+  .up {
+    height: 134px;
+    width: 201%;
+    left: -49%;
+  }
+}
+@media (min-width: 830px) {
+  .content {
+    font-size: 26px;
+    left: 27%;
+  }
+  .up {
+    height: 170px;
+    width: 202%;
+    font-size: 32px;
+    left: -49%;
+  }
 }

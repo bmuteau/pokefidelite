@@ -1,6 +1,6 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+
 
 global $db, $hlp;
 if (!isset($_SESSION['userTargetId'])) {
@@ -9,10 +9,11 @@ if (!isset($_SESSION['userTargetId'])) {
 
 if (isset($_POST['addPoint'])) {
     $hlp->addPoint($_SESSION['userTargetId'], $_POST['points']);
+    $_SESSION['idqrcodeprofil'] = $_SESSION['userTargetId'];
     unset($_SESSION['userTargetId']);
-    header('location:scanner');
+    header('location:qrcodeprofile');
 }
-
+include 'template/header.php';
 
 ?>
 <link href="styles/addPoints.css" rel="stylesheet">
@@ -30,5 +31,5 @@ if (isset($_POST['addPoint'])) {
 </form>
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>

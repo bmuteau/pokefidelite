@@ -1,12 +1,12 @@
 section {
   position: absolute;
   top: 20%;
-  left: 9%;
+  left: 28%;
 }
 
 h2 {
   background-color: #fae9c9;
-  font-size: 70px;
+  font-size: 36px;
   text-align: center;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -17,15 +17,15 @@ h3 {
 }
 article {
   position: absolute;
-  bottom: 20%;
-  left: 224px;
+  bottom: 5%;
+  left: 251px;
 }
 
 button {
-  width: 530px;
-  height: 172px;
+  width: 471px;
+  height: 92px;
   margin-bottom: 85px;
-  font-size: 50px;
+  font-size: 33px;
   border-radius: 41px;
 }
 .button1 {

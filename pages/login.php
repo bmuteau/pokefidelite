@@ -1,6 +1,5 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
 global $hlp, $db;
 $result = -1;
 $error = "";
@@ -25,10 +24,11 @@ if ($result > -1) {
     }
 }
 
-
+include 'template/header.php';
 
 
 ?>
+<title>Se connecter à son compte</title>
 <link href="styles/connexionregister.css" rel="stylesheet">
 <p class="cf">Mon compte de <br /> fidélité</p>
 
@@ -39,7 +39,7 @@ if ($result > -1) {
     <input name="mail" type="email" style="font-size: 51px;" value="EMAIL" autocomplete="off" onclick="javascript:this.value = '';" requiered>
     <label>Mot de passe</label>
     <input name="password" type="password" style="font-size: 51px;" value="MOT DE PASSE" autocomplete="off" onclick="javascript:this.value = '';" required>
-
+    <span class="psw"><a href="mdpoublie">Mot de passe oublié ?</a></span>
     <?php
     if ($result > 0) {
     ?>
@@ -55,6 +55,5 @@ if ($result > -1) {
 <a href="register" class="already2">Je n'ai pas de compte ! </a>
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>
-<p class="mlu">Mention légales d'utilisation</p>

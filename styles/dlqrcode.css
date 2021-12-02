@@ -14,22 +14,23 @@ h1 {
 
 .dl {
   position: absolute;
-  bottom: 61%;
-  width: 60%;
-  height: 10%;
+  bottom: 58%;
+  width: 82%;
+  height: 15%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fae9c9;
-  font-size: 48px;
+  font-size: 67px;
   padding: 10px 50px;
-  border-radius: 93px;
+  border-radius: 180px;
   font-weight: bold;
+  border-style: none;
 }
 .home {
   position: absolute;
   top: 14%;
-  width: 13%;
-  right: 10%;
+  width: 47%;
+  right: 0%;
 }
 .text1 {
   position: absolute;
@@ -43,7 +44,7 @@ h1 {
 }
 .text2 {
   position: absolute;
-  top: 61%;
+  top: 68%;
   text-align: center;
   left: 3%;
   font-size: 50px;
@@ -51,4 +52,15 @@ h1 {
   font-weight: 800;
   font-family: "Source Sans Pro", sans-serif;
   margin: 10px 25px;
+  border: black 5px solid;
+  padding: 26px 15px;
+}
+.text3 {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 3%;
+  font-size: 50px;
+  color: #ffa700;
+  font-family: "Source Sans Pro", sans-serif;
 }

@@ -9,6 +9,11 @@ use PDOException;
 
 class Database
 {
+    // private static $dbHost = "localhost";
+    // private static $dbName = "id18008086_pokefidelite";
+    // private static $dbUsername = "id18008086_brandonadmin";
+    // private static $dbPassword = "CY&?5B&W\=&oT_}=";
+
     private static $dbHost = "localhost";
     private static $dbName = "pokefidelite";
     private static $dbUsername = "root";

@@ -23,14 +23,15 @@ if ($result > -1) {
 }
 
 
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+include 'template/header.php';
 
 
 
 ?>
 <link href="styles/connexionregister.css" rel="stylesheet">
-<p class="cf">Compte de fidélité</p>
+<title>S'inscrire</title>
 
+<p class="cf">Compte de fidélité</p>
 
 <form method="POST">
     <p class="rules">Tous les champs sont obligatoires</p>
@@ -45,7 +46,6 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <label>Code postal</label>
     <input name="postal" type="number" style="font-size: 51px;" value="12345" onclick="javascript:this.value = '';" required>
 
-    <!-- NEED CAPTCHA -->
     <?php
     if ($result > 0) {
     ?>
@@ -62,6 +62,5 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 <?php
 
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>
-<p class="mlu">Mention légales d'utilisation</p>

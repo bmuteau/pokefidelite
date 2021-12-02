@@ -1,16 +1,22 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+global $db, $hlp;
+if (!isset($_SESSION['idqrcodeprofil'])) {
+    header("location:scanner");
+}
+$targetInfo = $hlp->idInfo($_SESSION['idqrcodeprofil']);
+
+include 'template/header.php';
 ?>
 <link href="styles/addPoints.css" rel="stylesheet">
 
-<img src="src/iconfinder_qrcode_7124082.svg" class="qrcode">
 
 <div class="user">
     <!--  VARIABLE A CHANGER SELON LE QRCODE test SCANNé-->
-    <p>Nom</p>
-    <p>Prénom</p>
-    <p>Nombre de points</p>
+    <p><?= $targetInfo['lname'] ?></p>
+    <p><?= $targetInfo['fname'] ?></p>
+    <p><?= $targetInfo['points'] ?></p>
+
 
 </div>
 
@@ -20,5 +26,5 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 </button>
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>

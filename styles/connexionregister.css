@@ -19,7 +19,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
-  border-radius: 50px;
+  border-radius: 175px;
   font-weight: bold;
   border: 3px solid #fae9c9;
 }
@@ -31,12 +31,11 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 50px;
-  border-radius: 50px;
+  border-radius: 175px;
   font-weight: bold;
   border: 3px solid #fae9c9;
 }
 .mlu {
-  color: blue;
   font-size: 36px;
   position: absolute;
   bottom: 0;
@@ -130,4 +129,70 @@ input {
   bottom: 17%;
   text-align: center;
   left: 26%;
+}
+.psw {
+  margin-top: 13%;
+  margin-bottom: -10%;
+  text-decoration: underline;
+}
+@media (min-width: 320px) {
+  form {
+    top: 18%;
+    font-size: 46px;
+  }
+  .submitsend {
+    margin-top: 20%;
+  }
+  .mlu {
+    bottom: -570px;
+  }
+}
+@media (min-width: 1020px) {
+  .cf {
+    top: 14%;
+  }
+  form {
+    font-size: 35px;
+    top: 22%;
+  }
+  input {
+    height: 50px;
+  }
+  .submitsend {
+    margin-top: 5%;
+    height: 72px;
+    width: 54%;
+    margin-left: 25%;
+  }
+  .already2 {
+    bottom: 26%;
+  }
+  .login {
+    left: 4%;
+  }
+}
+@media (min-width: 830px) {
+  .cf {
+    top: 14%;
+  }
+  form {
+    font-size: 37px;
+    top: 21%;
+  }
+  .submitsend {
+    margin-top: 24px;
+    height: 73px;
+    width: 54%;
+    margin-left: 22%;
+  }
+  .already {
+    font-size: 35px;
+  }
+  .login {
+    bottom: -95%;
+    left: 5%;
+  }
+  .already2 {
+    bottom: 21%;
+  }
 }

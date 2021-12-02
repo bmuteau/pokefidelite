@@ -75,6 +75,7 @@ $connectionNeeded = array(
     false,
     false,
     true,
+    false,
 );
 
 $adminNeeded = array(
@@ -91,6 +92,7 @@ $adminNeeded = array(
     true,
     false,
     true,
+    false,
     false,
 
 );
@@ -114,6 +116,7 @@ $urlsPossible = array(
     "register" => 10,
     "scanner" => 11,
     "qrcode" => 12,
+    "mdpoublie" => 13,
 
 
 
@@ -133,6 +136,7 @@ $filesPossible = array(
     "pages/register.php",
     "pages/scanner.php",
     "pages/qrcode.php",
+    "pages/forgot_password.php",
 );
 
 

@@ -1,8 +1,9 @@
 <?php
 // header
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+include 'template/header.php';
 
 ?>
+<title>Accueil Poké Fidélité</title>
 <link href="styles/connexionregister.css" rel="stylesheet">
 <p class="cf">Compte de fidélité</p>
 
@@ -15,6 +16,5 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>
-<p class="mlu">Mention légales d'utilisation</p>

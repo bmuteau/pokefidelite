@@ -4,9 +4,16 @@ $_SESSION['points'] = $hlp->majpoint($_SESSION['email']);
 if ($hlp->isConnected() == false) {
     header("location:connexionregister");
 }
-include 'C:\wamp64\www\pokefidelite\template\header.php ';
+$nbreduc = 100 - $_SESSION['points'];
+
+while ($nbreduc < 0) {
+    $nbreduc += 100;
+}
+
+include 'template/header.php';
 
 ?>
+<title>Accueil </title>
 <link href="styles/home.css" rel="stylesheet">
 
 <div class="menu-bg"></div>
@@ -21,7 +28,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
     <br />
     <br />
     <div> <a href="https://www.pokegranville.fr/contact/">• Nous contacter</a></div>
-    <div><a href="https://www.pokegranville.fr/mentions-legales/">• Mention légale </a></div>
+    <div><a href="https://www.pokegranville.fr/mentions-legales/">• Mentions légale </a></div>
     <div><a href="https://www.pokegranville.fr/politique-de-confidentialite/">• Politique de confidentialité</a></div>
     <br />
     <br />
@@ -34,7 +41,7 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <div class="content">
     <h2>Prochaine réduction dans : </h2>
-    <p><span> &nbsp; <?= 100 - $_SESSION['points'] ?> points &nbsp; </span></p>
+    <p><span> &nbsp; <?= $nbreduc ?> points &nbsp; </span></p>
     <h2>=</h2>
     <p class="reduct">10% de réduction</p>
     <h2>Mes points actuels :</h2>
@@ -59,5 +66,5 @@ include 'C:\wamp64\www\pokefidelite\template\header.php ';
 
 <?php
 // footer
-include 'C:\wamp64\www\pokefidelite\template\footer.php';
+include 'template/footer.php';
 ?>

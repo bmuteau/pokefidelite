@@ -7,11 +7,13 @@ function exportListingExcel(idTable, nameFile) {
         column2 = row.cells[1].innerText.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
         column3 = row.cells[2].innerText.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
         column4 = row.cells[3].innerText.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
+        column5 = row.cells[4].innerText.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
        
         column1 = column1.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
         column2 = column2.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
         column3 = column3.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
         column4 = column4.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
+        column5 = column5.replace('é', 'e').replace('<br>', ' ').replace('\n', ' ').replace('É', 'E').replace('N°', 'Numero de contrat').replace('à', 'a');
       
         rows.push(
             [
@@ -19,6 +21,7 @@ function exportListingExcel(idTable, nameFile) {
                 column2,
                 column3,
                 column4,
+                column5,
 
             ]
         );

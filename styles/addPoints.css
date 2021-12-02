@@ -1,14 +1,15 @@
 .qrcode {
   position: absolute;
   top: 20%;
-  left: 35%;
+  left: 41%;
+  width: 21%;
 }
 h2 {
   position: absolute;
-  top: 38%;
-  left: 23%;
+  top: 33%;
+  left: 36%;
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Source Sans Pro", sans-serif;
 }
 input {
@@ -35,8 +36,25 @@ input {
 .user {
   position: absolute;
   top: 34%;
-  left: 19%;
+  left: 35%;
   text-align: center;
   font-size: 80px;
   font-weight: 900;
+}
+@media (min-width: 1023px) {
+  .user {
+    top: 18%;
+  }
+  .button1 {
+    width: 562px;
+    height: 140px;
+  }
+}
+@media (min-width: 830px) {
+  input {
+    height: 100px;
+  }
+  .user {
+    top: 18%;
+  }
 }
