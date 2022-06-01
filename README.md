@@ -1,2 +1,3 @@
-v1.1 -> 27/11/21
-V1.2 ->02-12-21
+Digital fidelity card. 
+
+Need to update ( only mobile & tablet responsive ) 
